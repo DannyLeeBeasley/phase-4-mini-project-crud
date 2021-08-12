@@ -34,7 +34,7 @@ class SpicesController < ApplicationController
     end
 
     def render_not_found_response
-        render json: { error: "Spice Not Found" }, status: :not_found 
+        render json: { error: spice.errors.full_messages }, status: :not_found 
     end
 
 end
